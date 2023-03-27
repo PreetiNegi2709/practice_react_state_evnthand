@@ -1,0 +1,16 @@
+
+input{
+    width: 100%;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+}
+button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    border: none;
+    background-color: green; color: white;
+}
+button:hover{
+    cursor:pointer;
+}
