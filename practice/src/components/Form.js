@@ -14,16 +14,20 @@ const Form = (props) => {
 
     const formSubmitHandler = (event) =>{
         event.preventDefault();
-        let personalData = {
-            name: enterName,
-            age: enterAge
+        if (enterName.trim().length===0 || enterAge.trim().length===0){
+            alert("enter values")
         }
-        // console.log(personalData);
-        // send data to the parent using function onSaveData
-        props.onSaveData(personalData);
-
-        setEnterName('');
-        setEnterAge('');
+        else {
+            let personalData = {
+                name: enterName,
+                age: enterAge
+            }
+            // console.log(personalData);
+            // send data to the parent using function onSaveData
+            props.onSaveData(personalData);
+            setEnterName('');
+            setEnterAge('');
+        }
     }
 
     return (
